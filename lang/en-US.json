@@ -1,0 +1,655 @@
+{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for Photon.",
+	"text": {
+		"plugins": {
+			"photon": {
+				"name": "Photon",
+				"description": "Add multiplayer to your games and launch them globally with the included FREE Photon Cloud plan",
+				"help-url": "http://doc.photonengine.com",
+				"properties": {
+					"appid": {
+						"name": "AppId",
+						"desc": "Application id."
+						},
+					"appversion": {
+						"name": "AppVersion",
+						"desc": "Application version."
+						},
+					"protocol": {
+						"name": "Protocol",
+						"desc": "Connection protocol.",
+						"items": {
+							"ws":"ws",
+							"wss":"wss"
+							}
+						},
+					"region": {
+						"name": "Region",
+						"desc": "Master server region.",
+						"items": {
+							"eu":"eu",
+							"us":"us",
+							"asia":"asia",
+							"jp":"jp",
+							"au":"au",
+							"usw":"usw",
+							"sa":"sa",
+							"cae":"cae",
+							"kr":"kr",
+							"in":"in",
+							"cn":"cn",
+							"ru":"ru",
+							"rue":"rue"
+							}
+						},
+					"hosttype": {
+						"name": "HostType",
+						"desc": "Hosting type.",
+						"items": {
+							"photon cloud":"Photon Cloud",
+							"self hosted":"Self Hosted"
+							}
+						},
+					"selfhostedaddress": {
+						"name": "SelfHostedAddress",
+						"desc": "Self Hosted server address."
+						},
+					"loglevel": {
+						"name": "LogLevel",
+						"desc": "Logging level.",
+						"items": {
+							"debug":"DEBUG",
+							"info":"INFO",
+							"warn":"WARN",
+							"error":"ERROR",
+							"off":"OFF"
+							}
+						}
+				},
+				"aceCategories": {
+					"connection": "Connection",
+					"lobby": "Lobby",
+					"room": "Room",
+					"lobby_&_room": "Lobby & Room",
+					"actor": "Actor",
+					"common": "Common",
+					"client": "Client"
+				},
+				"conditions": {
+					"onerror0": {
+						"list-name": "On error",
+						"display-text": "On error",
+						"description": "Triggered on error."
+						},
+					"onstatechange1": {
+						"list-name": "On state change",
+						"display-text": "On state change",
+						"description": "Triggered on client state change."
+						},
+					"onevent3": {
+						"list-name": "On event",
+						"display-text": "On event [b]{0}[/b]",
+						"description": "Triggered on custom event with specific code.",
+						"params": {
+							"code0": { "name":"Code", "desc":"Event code."}
+						}
+						},
+					"onanyevent4": {
+						"list-name": "On any event",
+						"display-text": "On any event",
+						"description": "Triggered on any custom event."
+						},
+					"onroomlist10": {
+						"list-name": "On room list",
+						"display-text": "On room list",
+						"description": "Triggered on room list receive."
+						},
+					"onroomlistupdate11": {
+						"list-name": "On room list update",
+						"display-text": "On room list update",
+						"description": "Triggered on room list update."
+						},
+					"onactorpropertieschange12": {
+						"list-name": "On actor properties change",
+						"display-text": "On actor properties change",
+						"description": "Triggered when actor properties changed."
+						},
+					"onmyroompropertieschange13": {
+						"list-name": "On my room properties change",
+						"display-text": "On my room properties change",
+						"description": "Triggered when my room properties changed."
+						},
+					"onjoinroom14": {
+						"list-name": "On join room",
+						"display-text": "On join room",
+						"description": "Triggered when client joins room."
+						},
+					"onactorjoin15": {
+						"list-name": "On actor join",
+						"display-text": "On actor join",
+						"description": "Triggered when new actor joins the room."
+						},
+					"onactorleave16": {
+						"list-name": "On actor leave",
+						"display-text": "On actor leave",
+						"description": "Triggered when actor leaves the room."
+						},
+					"onactorsuspend17": {
+						"list-name": "On actor suspend",
+						"display-text": "On actor suspend",
+						"description": "Triggered when actor suspended in the room."
+						},
+					"onwebrpcresult18": {
+						"list-name": "On WebRPC result",
+						"display-text": "On WebRpc result",
+						"description": "Triggered when WebRPC request completed."
+						},
+					"onfindfriendsresult19": {
+						"list-name": "On FindFriends result",
+						"display-text": "On FindFriends result",
+						"description": "Triggered when FindFriends request completed."
+						},
+					"onlobbystats20": {
+						"list-name": "On lobbies statistics update",
+						"display-text": "On lobbies statistics update",
+						"description": "Triggered when lobbies statistics update received."
+						},
+					"onappstats21": {
+						"list-name": "On application statistics update",
+						"display-text": "On application statistics update",
+						"description": "Triggered when application statistics update received."
+						},
+					"onjoinedlobby22": {
+						"list-name": "On join lobby",
+						"display-text": "On join lobby",
+						"description": "Triggered on client joins lobby."
+						},
+					"onjoinrandomroomnomatchfound23": {
+						"list-name": "On joinRandomRoom no match found",
+						"display-text": "On joinRandomRoom no match found",
+						"description": "Triggered when joinRandomRoom called and no match found."
+						},
+					"ondisconnected24": {
+						"list-name": "On disconnect",
+						"display-text": "On disconnect",
+						"description": "Triggered when client gets disconnected from all servers."
+						},
+					"isconnectedtonameserver31": {
+						"list-name": "Is connected to Nameserver",
+						"display-text": "Is connected to Nameserver",
+						"description": "True if client connected to Nameserver."
+						},
+					"isconnectedtomaster32": {
+						"list-name": "Is connected to Master server",
+						"display-text": "Is connected to Master server",
+						"description": "True if client connected to Master server."
+						},
+					"isinlobby33": {
+						"list-name": "Is connected to a lobby",
+						"display-text": "Is connected to a lobby",
+						"description": "True if client connected to a lobby."
+						},
+					"isjoinedtoroom34": {
+						"list-name": "Is joined to a room",
+						"display-text": "Is joined to a room",
+						"description": "True if client joined to a room."
+						}
+				},
+				"actions": {
+					"setuserid0": {
+						"list-name": "Set user id",
+						"display-text": "Set optional user id to [b]{0}[/b]",
+						"description": "Set optional user id (required by some cloud services).",
+						"params": {
+							"userid0": { "name":"UserId", "desc":"User id."}
+						}
+					},
+					"setcustomauthentication1": {
+						"list-name": "Set custom authentication",
+						"display-text": "Enable custom authentication of type [b]{1}[/b] and set it's parameters to [b]{0}[/b]",
+						"description": "Enable custom authentication and set it's parameters.",
+						"params": {
+							"authparameters0": { "name":"AuthParameters", "desc":"Parameters expected by the used authentication service."},
+							"authtype4": { "name":"AuthType", "desc":"The type of custom authentication provider that should be used.", "items":{"custom":"Custom","steam":"Steam","facebook":"Facebook"}}
+						}
+					},
+					"sethostingtype3": {
+						"list-name": "Set hosting type",
+						"display-text": "Set hosting type to [b]{0}[/b]",
+						"description": "Set hosting type.",
+						"params": {
+							"hosttype2": { "name":"HostType", "desc":"Choose hosting type.", "items":{"photon cloud":"Photon Cloud","self hosted":"Self Hosted"}}
+						}
+					},
+					"setselfhostedaddress4": {
+						"list-name": "Set Self Hosted address",
+						"display-text": "Set Self Hosted address to [b]{0}[/b]",
+						"description": "Set Self Hosted address.",
+						"params": {
+							"selfhostedaddress0": { "name":"SelfHostedAddress", "desc":"Self Hosted address."}
+						}
+					},
+					"setregion5": {
+						"list-name": "Set region",
+						"display-text": "Set Master server region to [b]{0}[/b]",
+						"description": "Set Master server region.",
+						"params": {
+							"region0": { "name":"Region", "desc":"Region."}
+						}
+					},
+					"setappid6": {
+						"list-name": "Set app id",
+						"display-text": "Set app id to [b]{0}[/b]",
+						"description": "Set app id.",
+						"params": {
+							"app_id0": { "name":"App id", "desc":"App id."}
+						}
+					},
+					"setappversion7": {
+						"list-name": "Set app version",
+						"display-text": "Set app version to [b]{0}[/b]",
+						"description": "Set app version.",
+						"params": {
+							"app_version0": { "name":"App version", "desc":"App version."}
+						}
+					},
+					"connect10": {
+						"list-name": "Connect",
+						"display-text": "Connect to the name server",
+						"description": "Connect to the name server."
+					},
+					"createroom11": {
+						"list-name": "Create room",
+						"display-text": "Create room [b]{0}[/b] in lobby [b]{1}[/b]/[b]{2}[/b]",
+						"description": "Crate room.",
+						"params": {
+							"room0": { "name":"Room", "desc":"Room name."},
+							"lobbyname1": { "name":"LobbyName", "desc":"Lobby name."},
+							"lobbytype4": { "name":"LobbyType", "desc":"Lobby type.", "items":{"default":"Default","sqllobby":"SqlLobby"}}
+						}
+					},
+					"joinroom12": {
+						"list-name": "Join room",
+						"display-text": "Join room [b]{0}[/b] in lobby [b]{3}[/b]/[b]{4}[/b] (create if not exists: [b]{2}[/b], rejoin: [b]{1}[/b])",
+						"description": "Join room.",
+						"params": {
+							"room0": { "name":"Room", "desc":"Room name."},
+							"rejoin3": { "name":"Rejoin", "desc":"Rejoin by current userId", "items":{"no":"No","yes":"Yes"}},
+							"createifnotexists6": { "name":"CreateIfNotExists", "desc":"Create room if it does not exist", "items":{"no":"No","yes":"Yes"}},
+							"lobbyname7": { "name":"LobbyName", "desc":"Lobby name."},
+							"lobbytype10": { "name":"LobbyType", "desc":"Lobby type.", "items":{"default":"Default","sqllobby":"SqlLobby"}}
+						}
+					},
+					"joinrandomroom13": {
+						"list-name": "Join random room",
+						"display-text": "Join random room by [b]{1}[/b] matching my room: [b]{0}[/b] in lobby [b]{2}[/b]/[b]{3}[/b] with filter [b]{4}[/b]",
+						"description": "Join random room.",
+						"params": {
+							"matchmyroom2": { "name":"MatchMyRoom", "desc":"Use my room MaxPlayer and custom properties for matchmaking.", "items":{"no":"No","yes":"Yes"}},
+							"matchmakingmode6": { "name":"MatchmakingMode", "desc":"Matchmaking mode", "items":{"fillroom":"FillRoom","serialmatching":"SerialMatching","randommatching":"RandomMatching"}},
+							"lobbyname7": { "name":"LobbyName", "desc":"Lobby name."},
+							"lobbytype10": { "name":"LobbyType", "desc":"Lobby type.", "items":{"default":"Default","sqllobby":"SqlLobby"}},
+							"sqllobbyfilter11": { "name":"SqlLobbyFilter", "desc":"SqlLobby filter."}
+						}
+					},
+					"disconnect14": {
+						"list-name": "Disconnect",
+						"display-text": "Disconnect from all servers",
+						"description": "Disconnect from all servers."
+					},
+					"suspendroom15": {
+						"list-name": "Suspend room",
+						"display-text": "Disconnect client from Game server keeping player in room",
+						"description": "Disconnect client from Game server keeping player in room (to rejoin later) and connect to Master server if not connected."
+					},
+					"leaveroom16": {
+						"list-name": "Leave room",
+						"display-text": "Leave room",
+						"description": "Leave room and connect to Master server if not connected."
+					},
+					"raiseevent17": {
+						"list-name": "Raise event",
+						"display-text": "Raise game event [b]{0}[/b] with [b]{1}[/b] payload to [b]{4}[/b], target [b]{5}[/b], group [b]{2}[/b] ([b]{3}[/b], forward: [b]{6}[/b])",
+						"description": "Raise game event.",
+						"params": {
+							"code0": { "name":"Code", "desc":"Identifies this type of event."},
+							"data1": { "name":"Data", "desc":"Custom data you want to send along."},
+							"interestgroup2": { "name":"InterestGroup", "desc":"The ID of the interest group this event goes to."},
+							"cache11": { "name":"Cache", "desc":"Caching options for events.", "items":{"donotcache":"DoNotCache","mergecache":"MergeCache","replacecache":"ReplaceCache","removecache":"RemoveCache","addtoroomcache":"AddToRoomCache","addtoroomcacheglobal":"AddToRoomCacheGlobal","removefromroomcache":"RemoveFromRoomCache","removefromroomcacheforactorsleft":"RemoveFromRoomCacheForActorsLeft"}},
+							"receivers15": { "name":"Receivers", "desc":"Defines to which group of players the event is passed on.", "items":{"others":"Others","all":"All","masterclient":"MasterClient"}},
+							"targetactors16": { "name":"TargetActors", "desc":"Comma-separated list of target actors (who should receive the event) id's. Use only for small target groups. Send to all if empty."},
+							"webforward19": { "name":"WebForward", "desc":"Forward to web hook.", "items":{"no":"No","yes":"Yes"}}
+						}
+					},
+					"changegroups18": {
+						"list-name": "Change groups",
+						"display-text": "[b]{0}[/b] interest group [b]{1}[/b]",
+						"description": "Change client's interest group.",
+						"params": {
+							"action4": { "name":"Action", "desc":"Group action.", "items":{"add":"Add","add all current":"Add all current","remove":"Remove","remove all":"Remove all"}},
+							"group5": { "name":"Group", "desc":"Group to add or remove."}
+						}
+					},
+					"webrpc19": {
+						"list-name": "Call WebRpc",
+						"display-text": "Call remote procedure (WebRPC) [b]{0}[/b] with [b]{1}[/b] as [b]{2}[/b]",
+						"description": "Call remote procedure (WebRPC).",
+						"params": {
+							"uripath0": { "name":"UriPath", "desc":"Remote procedure uri path."},
+							"parameters1": { "name":"Parameters", "desc":"Remote procedure parameters."},
+							"parameterstype4": { "name":"ParametersType", "desc":"Parameters type.", "items":{"string":"String","json":"JSON"}}
+						}
+					},
+					"findfriends31": {
+						"list-name": "Find friends",
+						"display-text": "Request status of friends [b]{0}[/b] (FindFriends)",
+						"description": "Request Master server for friends online status and joined rooms (FindFriends).",
+						"params": {
+							"friends0": { "name":"Friends", "desc":"Comma-separated list of friends user id's"}
+						}
+					},
+					"requestlobbystats41": {
+						"list-name": "Request lobby stats",
+						"display-text": "Request lobbies statistics",
+						"description": "Request Master server for lobbies statistics."
+					},
+					"setmyactorname101": {
+						"list-name": "Set my actor name",
+						"display-text": "Set name of local actor to [b]{0}[/b]",
+						"description": "Set name of local actor.",
+						"params": {
+							"name0": { "name":"name", "desc":"Actor name."}
+						}
+					},
+					"setpropertyofactorbynr102": {
+						"list-name": "Set property of actor by nr.",
+						"display-text": "Set actor [b]{0}[/b] custom property [b]{1}[/b] to [b]{2}[/b] (forward: [b]{3}[/b], check [b]{5}[/b]: [b]{4}[/b])",
+						"description": "Set custom property of actor.",
+						"params": {
+							"actornr0": { "name":"ActorNr", "desc":"Actor number."},
+							"propname1": { "name":"PropName", "desc":"Property Name."},
+							"value2": { "name":"Value", "desc":"Property value."},
+							"webforward5": { "name":"WebForward", "desc":"Forward to web hook.", "items":{"no":"No","yes":"Yes"}},
+							"checkandset8": { "name":"CheckAndSet", "desc":"Set only if old equals to expected.", "items":{"no":"No","yes":"Yes"}},
+							"expectedvalue9": { "name":"ExpectedValue", "desc":"Expected property value."}
+						}
+					},
+					"setpropertyofmyroom103": {
+						"list-name": "Set property of my room",
+						"display-text": "Set custom property [b]{0}[/b] of my room to [b]{1}[/b] (forward: [b]{2}[/b], check [b]{4}[/b]: [b]{3}[/b])",
+						"description": "Set custom property of my room.",
+						"params": {
+							"propname0": { "name":"PropName", "desc":"Property Name."},
+							"value1": { "name":"Value", "desc":"Property value."},
+							"webforward4": { "name":"WebForward", "desc":"Forward to web hook.", "items":{"no":"No","yes":"Yes"}},
+							"checkandset7": { "name":"CheckAndSet", "desc":"Set only if old equals to expected.", "items":{"no":"No","yes":"Yes"}},
+							"expectedvalue8": { "name":"ExpectedValue", "desc":"Expected property value."}
+						}
+					},
+					"setpropslistedinlobby104": {
+						"list-name": "Set props listed in lobby",
+						"display-text": "Set properties listed in lobby to [b]{0}[/b]",
+						"description": "Set properties listed in lobby.",
+						"params": {
+							"propnames0": { "name":"PropNames", "desc":"Comma-separated list of properties mames to be listed in lobby."}
+						}
+					},
+					"setmyroomisvisible105": {
+						"list-name": "Set my room is visible",
+						"display-text": "Set rooms visibility to [b]{0}[/b]",
+						"description": "Set rooms visibility in the lobby's room list.",
+						"params": {
+							"isvisible2": { "name":"IsVisible", "desc":"New visibility value.", "items":{"no":"No","yes":"Yes"}}
+						}
+					},
+					"setmyroomisopen106": {
+						"list-name": "Set my room is open",
+						"display-text": "Set room open status to [b]{0}[/b]",
+						"description": "Set if this room can be joined.",
+						"params": {
+							"isopen2": { "name":"IsOpen", "desc":"New property value.", "items":{"no":"No","yes":"Yes"}}
+						}
+					},
+					"setmyroommaxplayers107": {
+						"list-name": "Set my room max players",
+						"display-text": "Set room max players to [b]{0}[/b]",
+						"description": "Set max players before room is considered full.",
+						"params": {
+							"maxplayers0": { "name":"MaxPlayers", "desc":"New max players value."}
+						}
+					},
+					"setemptyroomlivetime108": {
+						"list-name": "Set empty room live time",
+						"display-text": "Set room live time to [b]{0}[/b]",
+						"description": "Set room live time in the server room cache after all clients have left the room.",
+						"params": {
+							"emptyroomlivetime0": { "name":"EmptyRoomLiveTime", "desc":"New live time value in ms."}
+						}
+					},
+					"setsuspendedplayerlivetime109": {
+						"list-name": "Set suspended player live time",
+						"display-text": "Set suspended player live time to [b]{0}[/b]",
+						"description": "Set time in ms indicating how long suspended player will be kept in the room.",
+						"params": {
+							"suspendedplayerlivetime0": { "name":"SuspendedPlayerLiveTime", "desc":"New live time value in ms."}
+						}
+					},
+					"setuniqueuserid110": {
+						"list-name": "Set unique userid check",
+						"display-text": "Set user id check to to [b]{0}[/b]",
+						"description": "Activates user id checks on joining if set to true.",
+						"params": {
+							"unique2": { "name":"Unique", "desc":"New property value.", "items":{"no":"No","yes":"Yes"}}
+						}
+					},
+					"reset201": {
+						"list-name": "Reset",
+						"display-text": "Reset",
+						"description": "Disconnects and creates new client instance."
+					}
+				},
+				"expressions": {
+					"errorcode10": {
+						"description": "Last error code.",
+						"translated-name": "ErrorCode"
+						},
+					"errormessage20": {
+						"description": "Last error message.",
+						"translated-name": "ErrorMessage"
+						},
+					"state30": {
+						"description": "Current client state.",
+						"translated-name": "State"
+						},
+					"statestring40": {
+						"description": "Current client state string.",
+						"translated-name": "StateString"
+						},
+					"userid50": {
+						"description": "Previously set user id.",
+						"translated-name": "UserId"
+						},
+					"myactornr60": {
+						"description": "Local actor number.",
+						"translated-name": "MyActorNr"
+						},
+					"myroomname70": {
+						"description": "Currently my room name.",
+						"translated-name": "MyRoomName"
+						},
+					"eventcode80": {
+						"description": "Last Photon event code.",
+						"translated-name": "EventCode"
+						},
+					"eventdata90": {
+						"description": "Last Photon event data.",
+						"translated-name": "EventData"
+						},
+					"actornr100": {
+						"description": "Actor number.",
+						"translated-name": "ActorNr"
+						},
+					"roomcount110": {
+						"description": "Count of rooms available.",
+						"translated-name": "RoomCount"
+						},
+					"roomnameat120": {
+						"description": "Name of room at index.",
+						"translated-name": "RoomNameAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Room index."}
+						}
+						},
+					"roommaxplayers130": {
+						"description": "Max players before room is considered full",
+						"translated-name": "RoomMaxPlayers",
+						"params": {
+							"name0": { "name":"Name", "desc":"Room name."}
+						}
+						},
+					"roomisopen140": {
+						"description": "Defines if this room can be joined.",
+						"translated-name": "RoomIsOpen",
+						"params": {
+							"name0": { "name":"Name", "desc":"Room name."}
+						}
+						},
+					"roomplayercount150": {
+						"description": "Count of player currently in room.",
+						"translated-name": "RoomPlayerCount",
+						"params": {
+							"name0": { "name":"Name", "desc":"Room name."}
+						}
+						},
+					"roomproperty155": {
+						"description": "Room property.",
+						"translated-name": "RoomProperty",
+						"params": {
+							"name0": { "name":"Name", "desc":"Room name."},
+							"propname1": { "name":"PropName", "desc":"Property name."}
+						}
+						},
+					"propertyofmyroom160": {
+						"description": "Property of my room.",
+						"translated-name": "PropertyOfMyRoom",
+						"params": {
+							"propname0": { "name":"PropName", "desc":"Property name."}
+						}
+						},
+					"actorcount170": {
+						"description": "Count of actors in room.",
+						"translated-name": "ActorCount"
+						},
+					"actornrat180": {
+						"description": "Actor number of actor at index.",
+						"translated-name": "ActorNrAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Actor index."}
+						}
+						},
+					"actornamebynr190": {
+						"description": "Name of actor by number.",
+						"translated-name": "ActorNameByNr",
+						"params": {
+							"index0": { "name":"Index", "desc":"Actor index."}
+						}
+						},
+					"propertyofactorbynr200": {
+						"description": "Property of actor by number.",
+						"translated-name": "PropertyOfActorByNr",
+						"params": {
+							"actornr0": { "name":"ActorNr", "desc":"Actor number."},
+							"propname1": { "name":"PropName", "desc":"Property name"}
+						}
+						},
+					"changedpropertiescount210": {
+						"description": "Changed properties count.",
+						"translated-name": "ChangedPropertiesCount"
+						},
+					"changedpropertynameat220": {
+						"description": "Changed property name at index.",
+						"translated-name": "ChangedPropertyNameAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Property index."}
+						}
+						},
+					"masteractornr240": {
+						"description": "Actor number of room master.",
+						"translated-name": "MasterActorNr"
+						},
+					"webrpcuripath310": {
+						"description": "Request path of WrbRpc which triggered OnWebRpc condition.",
+						"translated-name": "WebRpcUriPath"
+						},
+					"webrpcresultcode320": {
+						"description": "Result code returned by remote procedure.",
+						"translated-name": "WebRpcResultCode"
+						},
+					"webrpcdata330": {
+						"description": "Data returned by remote procedure.",
+						"translated-name": "WebRpcData"
+						},
+					"friendonline410": {
+						"description": "True if friend is online.",
+						"translated-name": "FriendOnline",
+						"params": {
+							"name0": { "name":"Name", "desc":"Friend name."}
+						}
+						},
+					"friendroom420": {
+						"description": "Currently joined room name or empyt string.",
+						"translated-name": "FriendRoom",
+						"params": {
+							"name0": { "name":"Name", "desc":"Friend name."}
+						}
+						},
+					"lobbystatscount510": {
+						"description": "Count of lobbies statistics entries.",
+						"translated-name": "LobbyStatsCount"
+						},
+					"lobbystatsnameat520": {
+						"description": "Lobby name.",
+						"translated-name": "LobbyStatsNameAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Lobby index."}
+						}
+						},
+					"lobbystatstypeat530": {
+						"description": "Lobby type.",
+						"translated-name": "LobbyStatsTypeAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Lobby index."}
+						}
+						},
+					"lobbystatspeercountat540": {
+						"description": "Number of players in the lobby (on Master, not playing).",
+						"translated-name": "LobbyStatsPeerCountAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Lobby index."}
+						}
+						},
+					"lobbystatsgamecountat550": {
+						"description": "Number of games in the lobby.",
+						"translated-name": "LobbyStatsGameCountAt",
+						"params": {
+							"index0": { "name":"Index", "desc":"Lobby index."}
+						}
+						},
+					"appstatspeercount610": {
+						"description": "Count of players currently online on Game servers.",
+						"translated-name": "AppStatsPeerCount"
+						},
+					"appstatsmasterpeercount620": {
+						"description": "Count of players on Master server (looking for game).",
+						"translated-name": "AppStatsMasterPeerCount"
+						},
+					"appstatsgamecount630": {
+						"description": "Count of games currently in use (includes invisible and full rooms, so it doesn't match lobby list).",
+						"translated-name": "AppStatsGameCount"
+						}
+				}
+			}
+		}
+	}
+}

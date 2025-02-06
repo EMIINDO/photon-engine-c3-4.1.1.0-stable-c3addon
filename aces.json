@@ -1,0 +1,846 @@
+{
+	"connection": {
+		"conditions": [
+			{
+				"c2id": 31,
+				"id": "isconnectedtonameserver31",
+				"scriptName": "isConnectedToNameServer",
+				"highlight": false
+			},
+			{
+				"c2id": 32,
+				"id": "isconnectedtomaster32",
+				"scriptName": "isConnectedToMaster",
+				"highlight": false
+			},
+			{
+				"c2id": 33,
+				"id": "isinlobby33",
+				"scriptName": "isInLobby",
+				"highlight": false
+			},
+			{
+				"c2id": 34,
+				"id": "isjoinedtoroom34",
+				"scriptName": "isJoinedToRoom",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 0,
+				"id": "setuserid0",
+				"scriptName": "setUserId",
+				"highlight": false,
+				"params": [
+					{"id":"userid0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 1,
+				"id": "setcustomauthentication1",
+				"scriptName": "setCustomAuthentication",
+				"highlight": false,
+				"params": [
+					{"id":"authparameters0", "type":"string"},
+					{"id":"authtype4", "type":"combo", "items":["custom","steam","facebook"]}
+				]
+			},
+			{
+				"c2id": 3,
+				"id": "sethostingtype3",
+				"scriptName": "setHostingType",
+				"highlight": false,
+				"params": [
+					{"id":"hosttype2", "type":"combo", "items":["photon cloud","self hosted"]}
+				]
+			},
+			{
+				"c2id": 4,
+				"id": "setselfhostedaddress4",
+				"scriptName": "setSelfHostedAddress",
+				"highlight": false,
+				"params": [
+					{"id":"selfhostedaddress0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 5,
+				"id": "setregion5",
+				"scriptName": "setRegion",
+				"highlight": false,
+				"params": [
+					{"id":"region0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 6,
+				"id": "setappid6",
+				"scriptName": "setAppId",
+				"highlight": false,
+				"params": [
+					{"id":"app_id0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 7,
+				"id": "setappversion7",
+				"scriptName": "setAppVersion",
+				"highlight": false,
+				"params": [
+					{"id":"app_version0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 10,
+				"id": "connect10",
+				"scriptName": "connect",
+				"highlight": false
+			},
+			{
+				"c2id": 14,
+				"id": "disconnect14",
+				"scriptName": "disconnect",
+				"highlight": false
+			},
+			{
+				"c2id": 15,
+				"id": "suspendroom15",
+				"scriptName": "suspendRoom",
+				"highlight": false
+			},
+			{
+				"c2id": 16,
+				"id": "leaveroom16",
+				"scriptName": "leaveRoom",
+				"highlight": false
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 30,
+				"id": "state30",
+				"expressionName": "State",
+				"scriptName": "State",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 40,
+				"id": "statestring40",
+				"expressionName": "StateString",
+				"scriptName": "StateString",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 50,
+				"id": "userid50",
+				"expressionName": "UserId",
+				"scriptName": "UserId",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	},
+	"lobby": {
+		"conditions": [
+			{
+				"c2id": 10,
+				"id": "onroomlist10",
+				"scriptName": "onRoomList",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 11,
+				"id": "onroomlistupdate11",
+				"scriptName": "onRoomListUpdate",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 19,
+				"id": "onfindfriendsresult19",
+				"scriptName": "onFindFriendsResult",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 20,
+				"id": "onlobbystats20",
+				"scriptName": "onLobbyStats",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 21,
+				"id": "onappstats21",
+				"scriptName": "onAppStats",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 22,
+				"id": "onjoinedlobby22",
+				"scriptName": "onJoinedLobby",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 23,
+				"id": "onjoinrandomroomnomatchfound23",
+				"scriptName": "onJoinRandomRoomNoMatchFound",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 11,
+				"id": "createroom11",
+				"scriptName": "createRoom",
+				"highlight": false,
+				"params": [
+					{"id":"room0", "type":"string"},
+					{"id":"lobbyname1", "type":"string"},
+					{"id":"lobbytype4", "type":"combo", "items":["default","sqllobby"]}
+				]
+			},
+			{
+				"c2id": 12,
+				"id": "joinroom12",
+				"scriptName": "joinRoom",
+				"highlight": false,
+				"params": [
+					{"id":"room0", "type":"string"},
+					{"id":"rejoin3", "type":"combo", "items":["no","yes"]},
+					{"id":"createifnotexists6", "type":"combo", "items":["no","yes"]},
+					{"id":"lobbyname7", "type":"string"},
+					{"id":"lobbytype10", "type":"combo", "items":["default","sqllobby"]}
+				]
+			},
+			{
+				"c2id": 13,
+				"id": "joinrandomroom13",
+				"scriptName": "joinRandomRoom",
+				"highlight": false,
+				"params": [
+					{"id":"matchmyroom2", "type":"combo", "items":["no","yes"]},
+					{"id":"matchmakingmode6", "type":"combo", "items":["fillroom","serialmatching","randommatching"]},
+					{"id":"lobbyname7", "type":"string"},
+					{"id":"lobbytype10", "type":"combo", "items":["default","sqllobby"]},
+					{"id":"sqllobbyfilter11", "type":"string"}
+				]
+			},
+			{
+				"c2id": 31,
+				"id": "findfriends31",
+				"scriptName": "findFriends",
+				"highlight": false,
+				"params": [
+					{"id":"friends0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 41,
+				"id": "requestlobbystats41",
+				"scriptName": "requestLobbyStats",
+				"highlight": false
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 70,
+				"id": "myroomname70",
+				"expressionName": "MyRoomName",
+				"scriptName": "MyRoomName",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 110,
+				"id": "roomcount110",
+				"expressionName": "RoomCount",
+				"scriptName": "RoomCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 120,
+				"id": "roomnameat120",
+				"expressionName": "RoomNameAt",
+				"scriptName": "RoomNameAt",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 130,
+				"id": "roommaxplayers130",
+				"expressionName": "RoomMaxPlayers",
+				"scriptName": "RoomMaxPlayers",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 140,
+				"id": "roomisopen140",
+				"expressionName": "RoomIsOpen",
+				"scriptName": "RoomIsOpen",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 150,
+				"id": "roomplayercount150",
+				"expressionName": "RoomPlayerCount",
+				"scriptName": "RoomPlayerCount",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 155,
+				"id": "roomproperty155",
+				"expressionName": "RoomProperty",
+				"scriptName": "RoomProperty",
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"name0", "type":"string"},
+					{"id":"propname1", "type":"string"}
+				]
+			},
+			{
+				"c2id": 410,
+				"id": "friendonline410",
+				"expressionName": "FriendOnline",
+				"scriptName": "FriendOnline",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 420,
+				"id": "friendroom420",
+				"expressionName": "FriendRoom",
+				"scriptName": "FriendRoom",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 510,
+				"id": "lobbystatscount510",
+				"expressionName": "LobbyStatsCount",
+				"scriptName": "LobbyStatsCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 520,
+				"id": "lobbystatsnameat520",
+				"expressionName": "LobbyStatsNameAt",
+				"scriptName": "LobbyStatsNameAt",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 530,
+				"id": "lobbystatstypeat530",
+				"expressionName": "LobbyStatsTypeAt",
+				"scriptName": "LobbyStatsTypeAt",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 540,
+				"id": "lobbystatspeercountat540",
+				"expressionName": "LobbyStatsPeerCountAt",
+				"scriptName": "LobbyStatsPeerCountAt",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 550,
+				"id": "lobbystatsgamecountat550",
+				"expressionName": "LobbyStatsGameCountAt",
+				"scriptName": "LobbyStatsGameCountAt",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 610,
+				"id": "appstatspeercount610",
+				"expressionName": "AppStatsPeerCount",
+				"scriptName": "AppStatsPeerCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 620,
+				"id": "appstatsmasterpeercount620",
+				"expressionName": "AppStatsMasterPeerCount",
+				"scriptName": "AppStatsMasterPeerCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 630,
+				"id": "appstatsgamecount630",
+				"expressionName": "AppStatsGameCount",
+				"scriptName": "AppStatsGameCount",
+				"highlight": false,
+				"returnType": "number"
+			}
+		]
+	},
+	"room": {
+		"conditions": [
+			{
+				"c2id": 3,
+				"id": "onevent3",
+				"scriptName": "onEvent",
+				"isTrigger": "true",
+				"highlight": false,
+				"params": [
+					{"id":"code0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 4,
+				"id": "onanyevent4",
+				"scriptName": "onAnyEvent",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 12,
+				"id": "onactorpropertieschange12",
+				"scriptName": "onActorPropertiesChange",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 13,
+				"id": "onmyroompropertieschange13",
+				"scriptName": "onMyRoomPropertiesChange",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 14,
+				"id": "onjoinroom14",
+				"scriptName": "onJoinRoom",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 15,
+				"id": "onactorjoin15",
+				"scriptName": "onActorJoin",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 16,
+				"id": "onactorleave16",
+				"scriptName": "onActorLeave",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 17,
+				"id": "onactorsuspend17",
+				"scriptName": "onActorSuspend",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 17,
+				"id": "raiseevent17",
+				"scriptName": "raiseEvent",
+				"highlight": false,
+				"params": [
+					{"id":"code0", "type":"number"},
+					{"id":"data1", "type":"any"},
+					{"id":"interestgroup2", "type":"number"},
+					{"id":"cache11", "type":"combo", "items":["donotcache","mergecache","replacecache","removecache","addtoroomcache","addtoroomcacheglobal","removefromroomcache","removefromroomcacheforactorsleft"]},
+					{"id":"receivers15", "type":"combo", "items":["others","all","masterclient"]},
+					{"id":"targetactors16", "type":"string"},
+					{"id":"webforward19", "type":"combo", "items":["no","yes"]}
+				]
+			},
+			{
+				"c2id": 18,
+				"id": "changegroups18",
+				"scriptName": "changeGroups",
+				"highlight": false,
+				"params": [
+					{"id":"action4", "type":"combo", "items":["add","add all current","remove","remove all"]},
+					{"id":"group5", "type":"number"}
+				]
+			},
+			{
+				"c2id": 103,
+				"id": "setpropertyofmyroom103",
+				"scriptName": "setPropertyOfMyRoom",
+				"highlight": false,
+				"params": [
+					{"id":"propname0", "type":"string"},
+					{"id":"value1", "type":"any"},
+					{"id":"webforward4", "type":"combo", "items":["no","yes"]},
+					{"id":"checkandset7", "type":"combo", "items":["no","yes"]},
+					{"id":"expectedvalue8", "type":"any"}
+				]
+			},
+			{
+				"c2id": 104,
+				"id": "setpropslistedinlobby104",
+				"scriptName": "setPropsListedInLobby",
+				"highlight": false,
+				"params": [
+					{"id":"propnames0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 105,
+				"id": "setmyroomisvisible105",
+				"scriptName": "setMyRoomIsVisible",
+				"highlight": false,
+				"params": [
+					{"id":"isvisible2", "type":"combo", "items":["no","yes"]}
+				]
+			},
+			{
+				"c2id": 106,
+				"id": "setmyroomisopen106",
+				"scriptName": "setMyRoomIsOpen",
+				"highlight": false,
+				"params": [
+					{"id":"isopen2", "type":"combo", "items":["no","yes"]}
+				]
+			},
+			{
+				"c2id": 107,
+				"id": "setmyroommaxplayers107",
+				"scriptName": "setMyRoomMaxPlayers",
+				"highlight": false,
+				"params": [
+					{"id":"maxplayers0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 108,
+				"id": "setemptyroomlivetime108",
+				"scriptName": "setEmptyRoomLiveTime",
+				"highlight": false,
+				"params": [
+					{"id":"emptyroomlivetime0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 109,
+				"id": "setsuspendedplayerlivetime109",
+				"scriptName": "setSuspendedPlayerLiveTime",
+				"highlight": false,
+				"params": [
+					{"id":"suspendedplayerlivetime0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 110,
+				"id": "setuniqueuserid110",
+				"scriptName": "setUniqueUserId",
+				"isDeprecated": "true",
+				"highlight": false,
+				"params": [
+					{"id":"unique2", "type":"combo", "items":["no","yes"]}
+				]
+			}
+		],
+		"expressions": [
+			{
+				"c2id": 60,
+				"id": "myactornr60",
+				"expressionName": "MyActorNr",
+				"scriptName": "MyActorNr",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 80,
+				"id": "eventcode80",
+				"expressionName": "EventCode",
+				"scriptName": "EventCode",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 90,
+				"id": "eventdata90",
+				"expressionName": "EventData",
+				"scriptName": "EventData",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 100,
+				"id": "actornr100",
+				"expressionName": "ActorNr",
+				"scriptName": "ActorNr",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 160,
+				"id": "propertyofmyroom160",
+				"expressionName": "PropertyOfMyRoom",
+				"scriptName": "PropertyOfMyRoom",
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"propname0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 170,
+				"id": "actorcount170",
+				"expressionName": "ActorCount",
+				"scriptName": "ActorCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 180,
+				"id": "actornrat180",
+				"expressionName": "ActorNrAt",
+				"scriptName": "ActorNrAt",
+				"highlight": false,
+				"returnType": "number",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 190,
+				"id": "actornamebynr190",
+				"expressionName": "ActorNameByNr",
+				"scriptName": "ActorNameByNr",
+				"highlight": false,
+				"returnType": "string",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 200,
+				"id": "propertyofactorbynr200",
+				"expressionName": "PropertyOfActorByNr",
+				"scriptName": "PropertyOfActorByNr",
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"actornr0", "type":"number"},
+					{"id":"propname1", "type":"string"}
+				]
+			},
+			{
+				"c2id": 210,
+				"id": "changedpropertiescount210",
+				"expressionName": "ChangedPropertiesCount",
+				"scriptName": "ChangedPropertiesCount",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 220,
+				"id": "changedpropertynameat220",
+				"expressionName": "ChangedPropertyNameAt",
+				"scriptName": "ChangedPropertyNameAt",
+				"highlight": false,
+				"returnType": "any",
+				"params": [
+					{"id":"index0", "type":"number"}
+				]
+			},
+			{
+				"c2id": 240,
+				"id": "masteractornr240",
+				"expressionName": "MasterActorNr",
+				"scriptName": "MasterActorNr",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 310,
+				"id": "webrpcuripath310",
+				"expressionName": "WebRpcUriPath",
+				"scriptName": "WebRpcUriPath",
+				"highlight": false,
+				"returnType": "string"
+			},
+			{
+				"c2id": 320,
+				"id": "webrpcresultcode320",
+				"expressionName": "WebRpcResultCode",
+				"scriptName": "WebRpcResultCode",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 330,
+				"id": "webrpcdata330",
+				"expressionName": "WebRpcData",
+				"scriptName": "WebRpcData",
+				"highlight": false,
+				"returnType": "any"
+			}
+		]
+	},
+	"lobby_&_room": {
+		"conditions": [
+			{
+				"c2id": 18,
+				"id": "onwebrpcresult18",
+				"scriptName": "onWebRpcResult",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+			{
+				"c2id": 19,
+				"id": "webrpc19",
+				"scriptName": "webRpc",
+				"highlight": false,
+				"params": [
+					{"id":"uripath0", "type":"string"},
+					{"id":"parameters1", "type":"string"},
+					{"id":"parameterstype4", "type":"combo", "items":["string","json"]}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"actor": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 101,
+				"id": "setmyactorname101",
+				"scriptName": "setMyActorName",
+				"highlight": false,
+				"params": [
+					{"id":"name0", "type":"string"}
+				]
+			},
+			{
+				"c2id": 102,
+				"id": "setpropertyofactorbynr102",
+				"scriptName": "setPropertyOfActorByNr",
+				"highlight": false,
+				"params": [
+					{"id":"actornr0", "type":"number"},
+					{"id":"propname1", "type":"string"},
+					{"id":"value2", "type":"any"},
+					{"id":"webforward5", "type":"combo", "items":["no","yes"]},
+					{"id":"checkandset8", "type":"combo", "items":["no","yes"]},
+					{"id":"expectedvalue9", "type":"any"}
+				]
+			}
+		],
+		"expressions": [
+		]
+	},
+	"common": {
+		"conditions": [
+		],
+		"actions": [
+			{
+				"c2id": 201,
+				"id": "reset201",
+				"scriptName": "reset",
+				"highlight": false
+			}
+		],
+		"expressions": [
+		]
+	},
+	"client": {
+		"conditions": [
+			{
+				"c2id": 0,
+				"id": "onerror0",
+				"scriptName": "onError",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 1,
+				"id": "onstatechange1",
+				"scriptName": "onStateChange",
+				"isTrigger": "true",
+				"highlight": false
+			},
+			{
+				"c2id": 24,
+				"id": "ondisconnected24",
+				"scriptName": "onDisconnected",
+				"isTrigger": "true",
+				"highlight": false
+			}
+		],
+		"actions": [
+		],
+		"expressions": [
+			{
+				"c2id": 10,
+				"id": "errorcode10",
+				"expressionName": "ErrorCode",
+				"scriptName": "ErrorCode",
+				"highlight": false,
+				"returnType": "number"
+			},
+			{
+				"c2id": 20,
+				"id": "errormessage20",
+				"expressionName": "ErrorMessage",
+				"scriptName": "ErrorMessage",
+				"highlight": false,
+				"returnType": "string"
+			}
+		]
+	}
+}

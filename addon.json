@@ -1,0 +1,36 @@
+{
+  "is-c3-addon": true,
+  "sdk-version": 2,
+  "min-construct-version": "r401",
+  "type": "plugin",
+  "name": "Photon",
+  "id": "Photon",
+  "version": "4.1.1.0",
+  "author": "Exit Games",
+  "website": "http://doc.photonengine.com",
+  "documentation": "http://doc.photonengine.com",
+  "description": "Add multiplayer to your games and launch them globally with the included FREE Photon Cloud plan",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/main.js",
+    "Photon-Javascript_SDK.js",
+    "c2runtime/runtime.js",
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "aces.json",
+    "addon.json",
+    "icon.png",
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ]
+}
